@@ -16,7 +16,7 @@ fi
 
 # Set variables for source path and backup path
 img_path="/var/lib/libvirt/images/"
-backup_path="/home/ssalimi19/backups/"
+backup_path="/home/YOURUSERNAME/backups/"
 
 # prompt if all VMs to be backed-up
 read -p "Backup all VMs? (y|n):" answer
@@ -29,7 +29,7 @@ then
 		vm="deb${num}"
 		echo "Backing up VM ${vm}"
 		# gzip < ${img_path}${vm}.qcow2 > ${backup_path}${vm}.qcow2.gz
-		echo "gzip < ${img_path}$vm}.qcow2 > ${backup_path}${vm}.qcow2.gz"
+		"gzip < ${img_path}$vm}.qcow2 > ${backup_path}${vm}.qcow2.gz"
 		echo "${vm} BACKUP DONE"
 	done
 # Prompt for VM if answer is no
